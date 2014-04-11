@@ -1,0 +1,94 @@
+%html
+  %head
+    %title CNS Printer Checker
+    %link(rel="stylesheet" href="css/style.css")
+  %body
+    %h2
+      "CNS Printer Status"メールの内容をコピペすると幸せになれるページ
+    %form(method="POST" action="/")
+      %label
+        メール本文(Ctrl+cしてCtrl+v)
+      %textarea(name="mail_str")
+      %input(type="submit" value="GO")
+      %table(id="mono")
+        %tbody
+          %tr
+            %th
+            %td トレイ1 (A4)
+            %td トレイ2 (A3)
+            %td トレイ3 (A4)
+          %tr
+            %td ITC事務室入り口横(壁側)
+            %td #{@_11}
+            %td #{@_12}
+            %td #{@_13}
+          %tr
+            %td ITC 入り口横左
+            %td #{@_21}
+            %td #{@_22}
+            %td #{@_23}
+          %tr
+            %td ITC 入り口横右
+            %td #{@_31}
+            %td #{@_32}
+            %td #{@_33}
+          %tr
+            %td λ11左
+            %td #{@_41}
+            %td #{@_42}
+            %td #{@_43}
+          %tr
+            %td λ11右
+            %td #{@_51}
+            %td #{@_52}
+            %td #{@_53}
+          %tr
+            %td λ21
+            %td #{@_61}
+            %td #{@_62}
+            %td #{@_63}
+          %tr
+            %td λ18
+            %td #{@_71}
+            %td #{@_72}
+            %td #{@_73}
+          %tr
+            %td o17
+            %td #{@_81}
+            %td #{@_82}
+            %td #{@_83}
+          %tr
+            %td i18
+            %td #{@_91}
+            %td #{@_92}
+            %td #{@_93}
+          %tr
+            %td e17
+            %td #{@_101}
+            %td #{@_102}
+            %td #{@_103}
+          %tr
+            %td k18
+            %td #{@_111}
+            %td #{@_112}
+            %td #{@_113}
+          %tr
+            %td k教室棟2階
+            %td #{@_121}
+            %td #{@_122}
+            %td #{@_123}
+          %tr
+            %td i教室棟2階
+            %td #{@_131}
+            %td #{@_132}
+            %td #{@_133}
+          %tr
+            %td メディアセンター右
+            %td #{@_141}
+            %td #{@_142}
+            %td #{@_143}
+          %tr
+            %td メディアセンター左
+            %td #{@_151}
+            %td #{@_152}
+            %td #{@_153}
