@@ -8,7 +8,7 @@ class Parse
     f.close
     l = []
     string.each_line{|line| l.push((line.chomp).split)}
-    l = l[5..l.length-2]
+    l = l[4..l.length]
     15.times { |i|
       l[i] = l[i][2..4]
     }
