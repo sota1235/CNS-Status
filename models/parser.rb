@@ -56,6 +56,11 @@ class Parse
         break
       end
     }
-    p string
+    l = string.split("-")
+    dt = l[2].split(" ")
+    y = l[0][l[0].length-4,l[0].length]
+    m = (l[1].to_i).to_s
+    d = (dt[0].to_i).to_s
+    t = dt[1][0..4]
   end
 end
