@@ -10,6 +10,7 @@ class Server < Sinatra::Base
   get '/' do
     @parser = Parse.new
     @table = @parser.parse
+    @date = @parser.get_date
     haml :index
   end
 end

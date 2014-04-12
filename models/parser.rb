@@ -49,7 +49,7 @@ class Parse
 
   def get_date
     string = ""
-    f = open("./mail.txt")
+    f = open("./models/mail.txt")
     f.each_line{|line|
       string = line
       if string != "\n" then
