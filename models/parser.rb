@@ -32,14 +32,16 @@ class Parse
       "メディアセンター左"
     ]
     n_list.each {|s|
-      res += "<tr>"
-      res += "<td>" + place[0] + "</td>"
+      res += "<tr><td>" + place[0] + "</td>"
       place.delete_at(0)
-      if (s[0].sub("%","")).to_i <= 25
-        res+="<td><b style=\"color:red\">"+s[0]+"</b></td>"
-      else
-        res+="<td>"+s[0]+"</td>"
-      end
+      judge = [25, 25, 50] # 赤字の基準 [A4, A3, A4]
+      3.times {|i|
+        if (s[i].sub("%","")).to_i <= judge[i]
+          res+="<td><b style=\"color:red\">"+s[i]+"</b></td>"
+        else
+          res+="<td>"+s[i]+"</td>"
+        end
+      }
       res += "</tr>"
     }
     return res
