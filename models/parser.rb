@@ -46,4 +46,16 @@ class Parse
     }
     return res
   end
+
+  def get_date
+    string = ""
+    f = open("./mail.txt")
+    f.each_line{|line|
+      string = line
+      if string != "\n" then
+        break
+      end
+    }
+    p string
+  end
 end

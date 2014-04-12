@@ -1,4 +1,5 @@
 require "./parser.rb"
 
 @parser = Parse.new
-p @parser.parse
+# p @parser.parse
+@parser.get_date
