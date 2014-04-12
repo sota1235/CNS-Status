@@ -62,5 +62,6 @@ class Parse
     m = (l[1].to_i).to_s
     d = (dt[0].to_i).to_s
     t = dt[1][0..4]
+    return y + "年" + m + "月" + d + "日" + t + "現在"
   end
 end
