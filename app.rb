@@ -13,8 +13,8 @@ class Server < Sinatra::Base
     require_relative "./models/parser"
     txt = params[:mail]
     @parser = Parse.new
-    @table = @parser.parse
-    @date = @parser.get_date
+    @table = @parser.parse(txt)
+    @date = @parser.get_date(txt)
     haml :index
   end
 end

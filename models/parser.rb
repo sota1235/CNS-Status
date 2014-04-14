@@ -3,7 +3,7 @@ class Parse
     string = txt
     l = []
     string.each_line{|line| l.push((line.chomp).split)}
-    l = l[4..l.length]
+    l = l[5..l.length]
     15.times { |i|
       l[i] = l[i][2..4]
     }
@@ -43,7 +43,7 @@ class Parse
   end
 
   def get_date(txt)
-    string = txt
+    string = txt.split("\n")[2]
     l = string.split("-")
     dt = l[2].split(" ")
     y = l[0][l[0].length-4,l[0].length]
