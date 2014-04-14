@@ -6,7 +6,12 @@ require_relative 'models/init'
 
 class Server < Sinatra::Base
   get '/' do
-    require_relative './models/getter'
+    haml :index
+  end
+
+  post '/' do
+    require_relative "./models/parser"
+    txt = paramas[:mail]
     @parser = Parse.new
     @table = @parser.parse
     @date = @parser.get_date
