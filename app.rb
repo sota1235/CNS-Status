@@ -1,8 +1,6 @@
 require 'sinatra'
 require 'sinatra/base'
 require 'haml'
-require 'sass'
-require 'coffee-script'
 
 require_relative 'models/init'
 
