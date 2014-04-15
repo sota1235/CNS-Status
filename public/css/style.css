@@ -1,7 +1,11 @@
 @charset "utf-8";
 
 * {
-color: #333333;
+  color: #333333;
+}
+
+#wrap {
+  text-align: center;
 }
 
 h2 {
