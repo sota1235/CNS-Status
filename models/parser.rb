@@ -22,19 +22,19 @@ class Parse
       "λ11右",
       "λ21",
       "λ18",
-      "o17",
-      "i18",
-      "e17",
-      "k18",
-      "k教室棟2階",
-      "i教室棟2階",
+      "O17",
+      "I18",
+      "E17",
+      "K18",
+      "K教室棟2階",
+      "I教室棟2階",
       "メディアセンター右",
       "メディアセンター左"
     ]
     n_list.each {|s|
       res += "<tr><td>" + place[0] + "</td>"
       place.delete_at(0)
-      judge = [25, 25, 50] # 赤字の基準 [A4, A3, A4]
+      judge = [25, 25, 75] # 赤字の基準 [A4, A3, A4]
       3.times {|i|
         if (s[i].sub("%","")).to_i <= judge[i]
           res+="<td><b style=\"color:red\">"+s[i]+"</b></td>"
