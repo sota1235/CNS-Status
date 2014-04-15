@@ -3,16 +3,17 @@
     %title CNS Printer Checker
     %link(rel="stylesheet" href="css/style.css")
   %body
-    %h2
-      CNS Printer達のご機嫌をお伺いするページ
-    %p #{@date}
-    %table(id="mono")
-      %tbody
-        %tr
-          %th
-          %td トレイ1 (A4)
-          %td トレイ2 (A3)
-          %td トレイ3 (A4)
-        #{@table}
-    %form(method="GET" action="/")
-      %input(type="submit" value="GO")
+    #wrap
+      %h2
+        CNS Printer達のご機嫌をお伺いするページ
+      %p #{@date}
+      %table(id="mono")
+        %tbody
+          %tr
+            %th
+              %td トレイ1 (A4)
+            %td トレイ2 (A3)
+            %td トレイ3 (A4)
+          #{@table}
+      %form(method="GET" action="/")
+        %input(type="submit" value="GO")
