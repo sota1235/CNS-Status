@@ -1,6 +1,11 @@
 class Parse
-  def parse(txt)
-    string = txt
+  def parse
+    string = ""
+    f = open("./models/mail.txt")
+    f.each_line{|line|
+      string += line
+    }
+    f.close
     l = []
     string.each_line{|line| l.push((line.chomp).split)}
     l = l[5..l.length]
@@ -43,7 +48,14 @@ class Parse
   end
 
   def get_date(txt)
-    string = txt.split("\n")[2]
+    string = ""
+    f = open("./models/mail.txt")
+    f.each_line{|line|
+      string = line
+      if string != "\n" then
+        break
+      end
+    }
     l = string.split("-")
     dt = l[2].split(" ")
     y = l[0][l[0].length-4,l[0].length]
