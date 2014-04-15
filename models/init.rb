@@ -1,1 +1,2 @@
-require_relative './parser.rb'require_relative './getter.rb'
+require_relative './parser.rb'
+require_relative './getter.rb'
