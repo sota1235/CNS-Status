@@ -8,7 +8,7 @@ class Parse
     f.close
     l = []
     string.each_line{|line| l.push((line.chomp).split)}
-    l = l[5..l.length]
+    l = l[4..l.length]
     15.times { |i|
       l[i] = l[i][2..4]
     }
@@ -47,7 +47,7 @@ class Parse
     return res
   end
 
-  def get_date(txt)
+  def get_date
     string = ""
     f = open("./models/mail.txt")
     f.each_line{|line|
