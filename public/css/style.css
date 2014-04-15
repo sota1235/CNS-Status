@@ -4,7 +4,7 @@
 color: #333333;
 }
 
-div#wrap {
+body {
   font-family: "Osaka-等幅", "ＭＳ ゴシック";
   width: 500px;
   margin: auto;
@@ -20,16 +20,17 @@ p {
   text-align: center;
 }
 
-textarea#text {
-  font-family: "Osaka-等幅", "ＭＳ ゴシック";
-  width: 500px;
-  height: 30px;
-}
-
 table {
   width: 500px;
   font-size: 12px;
+  margin-left: auto;
+  margin-right: auto;
   border-collapse: collapse;
+}
+
+input {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 th, td {
