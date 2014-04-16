@@ -21,7 +21,7 @@
       %p
         #{@date}
       %small
-        %table(id="mono" class="table-bordered table-striped table-condensed table-responsive")
+        %table(id="mono" class="table-bordered table-striped table-condensed table-responsive" align="center")
           %thead
             %tr
               %th
@@ -29,7 +29,8 @@
               %td トレイ2 (A3)(1.5束)
               %td トレイ3 (A4)(5束)
           %tbody
-            #{@table} 
+            #{@table}
+        %p
         %form(method="GET" action="/")
           %input(type="submit" value="   Reload   " class="btn btn-primary")  
     / /.container

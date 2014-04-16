@@ -37,7 +37,7 @@ class Parse
       judge = [25, 25, 75] # 赤字の基準 [A4, A3, A4]
       3.times {|i|
         if (s[i].sub("%","")).to_i <= judge[i]
-          res+="<td class=\"danger\">"+s[i]+"</td>"
+          res+="<td style=\"background-color: #FF4949\">"+s[i]+"</td>"
         else
           res+="<td>"+s[i]+"</td>"
         end
