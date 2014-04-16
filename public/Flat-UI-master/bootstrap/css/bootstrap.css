@@ -13,6 +13,11 @@ html {
 body {
   margin: 0;
 }
+
+tbody.tbody {
+  height: 17px !important;
+}
+
 article,
 aside,
 details,
