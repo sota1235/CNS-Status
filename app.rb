@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/base'
 require 'haml'
+require "sinatra/reloader" if development?
 
 require_relative 'models/init'
 
