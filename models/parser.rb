@@ -64,4 +64,8 @@ class Parse
     t = dt[1][0..4]
     return y + "年" + m + "月" + d + "日" + t + "現在"
   end
+
+  def get
+    require_relative "./models/getter.rb"
+  end
 end
