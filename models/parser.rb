@@ -66,6 +66,6 @@ class Parse
   end
 
   def get
-    require_relative "./models/getter.rb"
+    require_relative "./getter.rb"
   end
 end
