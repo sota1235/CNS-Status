@@ -6,8 +6,8 @@ require_relative 'models/init'
 
 class Server < Sinatra::Base
   get '/' do
-    require_relative 'models/getter'
     @parser = Parse.new
+    @parser.get
     @table = @parser.parse
     @date = @parser.get_date
     haml :index
