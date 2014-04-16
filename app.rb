@@ -12,4 +12,8 @@ class Server < Sinatra::Base
     @date = @parser.get_date
     haml :index
   end
+
+  get '/script.js' do
+    coffee :script
+  end
 end
