@@ -3,3 +3,5 @@
 *.swp
 test.*
 mail.txt
+vender/bundle/*
+.bundle
