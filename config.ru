@@ -5,7 +5,7 @@ map "/css" do
 end
 
 map "/js" do
-    run Rack::File.new("./public/js")
+    run Rack::Directory.new("./public/js")
 end
 
 map "/favicon.ico" do
