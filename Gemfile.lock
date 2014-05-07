@@ -2,14 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.6.0)
-    coffee-script (2.2.0)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.7.0)
-    execjs (2.0.2)
     haml (4.0.5)
       tilt
-    multi_json (1.9.2)
+    multi_json (1.10.0)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -32,7 +27,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-script
   haml
   sinatra
   sinatra-contrib
