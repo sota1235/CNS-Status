@@ -3,7 +3,7 @@ require 'open-uri'
 
 class Getter
   def get
-    @path = "http://sota1235.net/printer/mail.txt"
+    @path = "http://web.sfc.keio.ac.jp/~t11460ss/mail.txt"
 
     f = open("./models/mail.txt","w")
     open(@path){|c|
