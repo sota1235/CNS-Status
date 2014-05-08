@@ -14,12 +14,16 @@
       <script src="Flat-UI-master/js/html5shiv.js"></script>
       <script src="Flat-UI-master/js/respond.min.js"></script>
       <script src="./script.js"></script>
+    %script(src="js/jquery-1.11.0.min.js")
+    %script(src="js/jquery-migrate-1.2.1.min.js")
+    %script(src="js/ajax.js")
+    %script(src="js/script.js")
   %body
     .container
       %h4
         CNS Printer達のご機嫌をお伺いするページ
       %p
-        #{@date}
+        #date
       %p
         紙詰めの際にお使いください
       %p
@@ -35,7 +39,6 @@
               %td トレイ2 (A3) (1.5束)
               %td トレイ3 (A4) (5束)
           %tbody(class="tbody")
-            #{@table}
         %form(method="GET" action="/")
           %input(type="submit" value="   Reload   " class="btn btn-primary")
         %p
