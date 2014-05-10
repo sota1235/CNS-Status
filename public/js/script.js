@@ -1,4 +1,4 @@
-var ajax = new Ajax('http://web.sfc.keio.ac.jp/~t11460ss/mail.json');
+var ajax = new Ajax('http://web.sfc.keio.ac.jp/~t11460ss/json.php');
 var place = [
   "ITC事務室入り口横(壁側)",
   "ITC 入り口横左",
@@ -18,17 +18,24 @@ var place = [
 ]
 
 ajax.onget = function(data){
-  var s = data['status'].split(' ').slice(2, 5);
-  for(var i=0;i<data.place.length;i++){
+  /* parse */
+  var json = $.parseJSON(data);
+  var date = json['date'];
+  var p_status = json['status'];
+
+  $('#date').text('hello');
+
+  /* insert into table */
+  for(var i=0;i<p_status.length;i++){
     $('tbody').append(
       $('<tr></tr>')
-        .append($('<td></td>').text(s[0]))
-        .append($('<td></td>').text(s[1]))
-        .append($('<td></td>').text(s[2]))
+        .append($('<td></td>').text(place[i]))
+        .append($('<td></td>').text(table[i][0]))
+        .append($('<td></td>').text(table[i][1]))
+        .append($('<td></td>').text(table[i][2]))
         );
   }
-  // $('#date').append(date['date']);
-  $('date').html("hello");
+  $('#date').text('hello');
 }
 
 $(function() {
@@ -36,7 +43,8 @@ $(function() {
 
   ajax.get();
   /* event */
-  $reload.click({
-  });
+  $reload.click(
+    ajax.get()
+  );
 
 });
