@@ -28,13 +28,22 @@ ajax.on_get = function(data){
 
   /* insert into table */
   for(var i=0;i<p_status.length;i++){
-    $('tbody').append(
-      $('<tr></tr>')
-        .append($('<td></td>').text(place[i]))
-        .append($('<td></td>').text(p_status[i][0]))
-        .append($('<td></td>').text(p_status[i][1]))
-        .append($('<td></td>').text(p_status[i][2]))
-        );
+    var $tr = $('<tr></tr>');
+    var judge = [25, 50, 25]; // トレイ1,2,3の警告基準
+
+    $tr.append($('<td></td>').text(place[i]));
+    for(var j=0;j<3;j++){
+      if(Number(p_status[i][j].slice(0, -1)) <= judge[j]){
+        $tr.append($('<td></td>')
+            .css("background-color","#FF8080")
+            .css("color", "#FFFFFF")
+            .text(p_status[i][j]));
+      } else {
+        $tr.append($('<td></td>')
+            .text(p_status[i][j]));
+      }
+    }
+    $('tbody').append($tr);
   }
   $('#date').text(date);
 }
