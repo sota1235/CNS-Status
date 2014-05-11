@@ -8,9 +8,15 @@
 
 * http://printer.sota1235.net
 
+<<<<<<< HEAD
 * ajax使用版はuse_ajaxブランチへどうぞ
+=======
+* ajax版
+>>>>>>> use_ajax
 
 ## Enviroment
+
+* using ajax by jquery
 
 * Ruby2.1.1
 
