@@ -17,25 +17,26 @@ var place = [
   "メディアセンター左"
 ]
 
-ajax.onget = function(data){
+ajax.on_get = function(data){
   /* parse */
   var json = $.parseJSON(data);
   var date = json['date'];
   var p_status = json['status'];
 
-  $('#date').text('hello');
+  /* remove table */
+  $('tbody tr').remove();
 
   /* insert into table */
   for(var i=0;i<p_status.length;i++){
     $('tbody').append(
       $('<tr></tr>')
         .append($('<td></td>').text(place[i]))
-        .append($('<td></td>').text(table[i][0]))
-        .append($('<td></td>').text(table[i][1]))
-        .append($('<td></td>').text(table[i][2]))
+        .append($('<td></td>').text(p_status[i][0]))
+        .append($('<td></td>').text(p_status[i][1]))
+        .append($('<td></td>').text(p_status[i][2]))
         );
   }
-  $('#date').text('hello');
+  $('#date').text(date);
 }
 
 $(function() {
