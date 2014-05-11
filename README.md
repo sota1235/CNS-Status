@@ -20,6 +20,6 @@
 
     % git clone git@github.com:sota1235/CNS-Status.git
 
-    % bundle install
+    % bundle install --path=vendor/bundle
 
     % rackup
