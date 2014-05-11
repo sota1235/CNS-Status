@@ -8,7 +8,11 @@
 
 * http://printer.sota1235.net
 
+* ajax版
+
 ## Enviroment
+
+* using ajax by jquery
 
 * Ruby2.1.1
 
