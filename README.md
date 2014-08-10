@@ -8,11 +8,9 @@
 
 * http://printer.sota1235.net
 
-<<<<<<< HEAD
+* 静的ファイル配信に切り替えました -> [CNS Status Static](https://github.com/sota1235/CNS-Status-Static)
+
 * ajax使用版はuse_ajaxブランチへどうぞ
-=======
-* ajax版
->>>>>>> use_ajax
 
 ## Enviroment
 
